@@ -5,6 +5,9 @@ const counter = document.getElementById("counter");
 const fsBtn = document.getElementById("fsBtn");
 
 let currentPage = getInitialPageFromURL();
+const LAST_PAGE_KEY = "nomu_last_page";
+
+
 
 // --- helpers ---
 function pageSrc(n){
@@ -35,6 +38,8 @@ function goEnd(){
 
 // --- render ---
 function render(direction = 1){
+    saveLastPage(currentPage);
+
   counter.textContent = `${currentPage} / ${totalPages}`;
   setURLPage(currentPage);
 
