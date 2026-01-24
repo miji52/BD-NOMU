@@ -19,6 +19,17 @@
     <img class="cover" src="pages/cover.png" alt="Couverture" draggable="false" />
   </div>
 </div>
+<script>
+  const LAST_PAGE_KEY = "nomu_last_page";
+  const lastPage = parseInt(localStorage.getItem(LAST_PAGE_KEY) || "1", 10);
+
+  const btn = document.querySelector(".btn");
+
+  if (btn && lastPage > 1) {
+    btn.textContent = `Reprendre (page ${lastPage})`;
+    btn.href = `reader.html?page=${lastPage}`;
+  }
+</script>
 
 </body>
 </html>
