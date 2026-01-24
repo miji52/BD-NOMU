@@ -4,10 +4,9 @@ const img = document.getElementById("page");
 const counter = document.getElementById("counter");
 const fsBtn = document.getElementById("fsBtn");
 
-let currentPage = getInitialPageFromURL();
 const LAST_PAGE_KEY = "nomu_last_page";
 
-
+let currentPage = getInitialPageFromURL();
 
 // --- helpers ---
 function pageSrc(n){
@@ -31,6 +30,9 @@ function preload(n){
   const pre = new Image();
   pre.src = pageSrc(n);
 }
+function saveLastPage(n){
+  try { localStorage.setItem(LAST_PAGE_KEY, String(n)); } catch(e) {}
+}
 
 function goEnd(){
   window.location.href = "end.html";
@@ -38,7 +40,7 @@ function goEnd(){
 
 // --- render ---
 function render(direction = 1){
-    saveLastPage(currentPage);
+  saveLastPage(currentPage);
 
   counter.textContent = `${currentPage} / ${totalPages}`;
   setURLPage(currentPage);
@@ -116,3 +118,4 @@ counter.textContent = `${currentPage} / ${totalPages}`;
 preload(currentPage + 1);
 preload(currentPage - 1);
 setURLPage(currentPage);
+saveLastPage(currentPage);
