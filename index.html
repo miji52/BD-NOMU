@@ -13,23 +13,33 @@
     <div class="meta">
       <h1>Une aventure de Nomu</h1>
       <p>Lecture interactive • swipe • plein écran</p>
-      <a class="btn" href="reader.html?page=1">Lire</a>
+      <div class="row">
+  <a class="btn" id="startBtn" href="reader.html?page=1">Lire depuis le début</a>
+  <a class="btn ghost" id="resumeBtn" href="#" style="display:none;">Reprendre</a>
+</div>
+
     </div>
 
     <img class="cover" src="pages/cover.png" alt="Couverture" draggable="false" />
   </div>
 </div>
 <script>
-  const LAST_PAGE_KEY = "nomu_last_page";
-  const lastPage = parseInt(localStorage.getItem(LAST_PAGE_KEY) || "1", 10);
+  (function () {
+    const key = "nomu_last_page";
+    const resumeBtn = document.getElementById("resumeBtn");
 
-  const btn = document.querySelector(".btn");
+    if (!resumeBtn) return;
 
-  if (btn && lastPage > 1) {
-    btn.textContent = `Reprendre (page ${lastPage})`;
-    btn.href = `reader.html?page=${lastPage}`;
-  }
+    const p = parseInt(localStorage.getItem(key) || "1", 10);
+
+    if (p && !isNaN(p) && p > 1) {
+      resumeBtn.href = "reader.html?page=" + p;
+      resumeBtn.textContent = "Reprendre (page " + p + ")";
+      resumeBtn.style.display = "inline-block";
+    }
+  })();
 </script>
+
 
 </body>
 </html>
