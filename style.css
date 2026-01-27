@@ -134,3 +134,29 @@ body{
 #homeBtn{ top: 10px; left: 12px; text-decoration: none; }
 
 #fsBtn:active{ transform: scale(0.98); }
+#hint {
+  position: fixed;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Creepster", cursive, serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  color: #ffddb3;
+  text-shadow: 0 0 8px rgba(255, 120, 40, 0.8);
+  opacity: 0;
+  animation: hintAppear 1.5s ease forwards,
+             hintDisappear 1.5s ease 4s forwards;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes hintAppear {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes hintDisappear {
+  to { opacity: 0; }
+}
+
