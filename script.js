@@ -54,12 +54,16 @@ function render(direction = 1){
   img.style.transform = `translateX(${direction * 55}px) rotateY(${direction * -12}deg)`;
 
   setTimeout(() => {
-    img.classList.add("is-turning");
+    if (sheet){
+  sheet.classList.remove("turn-next","turn-prev");
+  sheet.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+}
+
 
     img.src = pageSrc(currentPage);
-    img.onload = () => {
+  setTimeout(() => {
   img.classList.remove("is-turning");
-};
+}, 450);
 
     img.onload = () => {
       img.style.transform = "translateX(0) rotateY(0deg)";
