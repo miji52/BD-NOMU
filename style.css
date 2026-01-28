@@ -444,15 +444,23 @@ body{
   inset: 0;
   border-radius: 10px;
   pointer-events: none;
+    will-change: opacity, transform;
+  transform: translateZ(0);
+
   opacity: 0;
 }
 
 /* Quand on tourne vers l'avant (page suivante) */
 #over.turn-next{
+  will-change: transform, opacity;
+transform: translateZ(0);
+
   animation: turnNext 0.6s ease forwards;
 }
 #over.turn-next::after{
   opacity: 1;
+    transition: opacity 0.12s ease;
+
   /* ombre plus marquée côté pli + léger assombrissement global */
   background:
     radial-gradient(120% 80% at 0% 50%, rgba(0,0,0,.35), rgba(0,0,0,0) 55%),
@@ -461,10 +469,15 @@ body{
 
 /* Quand on tourne en arrière (page précédente) */
 #over.turn-prev{
+  will-change: transform, opacity;
+transform: translateZ(0);
+
   transform-origin: right center;
   animation: turnPrev 0.6s ease forwards;
 }
 #over.turn-prev::after{
+    transition: opacity 0.12s ease;
+
   opacity: 1;
   background:
     radial-gradient(120% 80% at 100% 50%, rgba(0,0,0,.35), rgba(0,0,0,0) 55%),
