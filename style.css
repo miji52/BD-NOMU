@@ -283,6 +283,20 @@ body{
   perspective: 1200px;
   perspective-origin: center;
 }
+/* Base “feuille” */
+#page{
+  border-radius: 6px;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.45);
+  transform-origin: left center;
+  backface-visibility: hidden;
+  transition: transform 0.45s ease, box-shadow 0.45s ease, opacity 0.25s ease;
+}
+
+/* État pendant la "tournure" */
+#page.is-turning{
+  transform: translateX(-70px) rotateY(-18deg) scale(0.985);
+  box-shadow: 25px 0 45px rgba(0,0,0,0.45);
+}
 
 
 
