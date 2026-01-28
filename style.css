@@ -166,5 +166,22 @@ body{
   border-radius: 4px;
   background: #111;
 }
+.page {
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    opacity 0.25s ease;
+  transform-origin: left center;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* état quand on change de page */
+.page.is-turning {
+  transform: translateX(-70px) rotateY(-18deg);
+  box-shadow:
+    25px 0 45px rgba(0,0,0,0.45);
+}
+
 
 
