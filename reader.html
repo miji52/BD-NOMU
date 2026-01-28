@@ -2,26 +2,28 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lecture — Nomu</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Lecteur — Nomu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="reader">
-  <a id="homeBtn" href="index.html" title="Accueil">⌂</a>
-  <button id="fsBtn" title="Plein écran">⛶</button>
+<a href="index.html" class="home">⌂</a>
 
- <div id="sheet" class="sheet">
-  <img id="page" class="page" src="pages/page01.png" alt="BD page" draggable="false" />
-</div>
+<div id="reader" class="reader">
+  <div class="topbar">
+    <div id="counter" class="counter">1 / 9</div>
+    <button id="fsBtn" class="fs">⤢</button>
+  </div>
 
-
-
-  <div id="counter">1 / 9</div>
+  <!-- Hint (tu peux garder ton texte ici) -->
   <div id="hint">← Page précédente • Page suivante →</div>
 
-
+  <!-- "Livre" : 2 images superposées -->
+  <div id="book" class="book">
+    <img id="under" class="page under" src="pages/page01.png" alt="page dessous" draggable="false" />
+    <img id="over" class="page over" src="pages/page01.png" alt="page dessus" draggable="false" />
+  </div>
 </div>
 
 <script src="script.js"></script>
