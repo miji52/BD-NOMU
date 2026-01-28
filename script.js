@@ -1,6 +1,8 @@
 const totalPages = 9;
 
 const img = document.getElementById("page");
+const sheet = document.getElementById("sheet");
+
 const counter = document.getElementById("counter");
 const fsBtn = document.getElementById("fsBtn");
 
