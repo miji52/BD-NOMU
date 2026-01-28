@@ -56,6 +56,10 @@ function render(direction = 1){
 
     img.src = pageSrc(currentPage);
     img.onload = () => {
+  img.classList.remove("is-turning");
+};
+
+    img.onload = () => {
       img.style.transform = "translateX(0) rotateY(0deg)";
       img.style.opacity = 1;
     };
