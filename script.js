@@ -59,11 +59,19 @@ function render(direction = 1){
   sheet.classList.add(direction > 0 ? "turn-next" : "turn-prev");
 }
 
+if (sheet){
+  sheet.classList.remove("turn-next","turn-prev");
+  sheet.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+}
 
     img.src = pageSrc(currentPage);
-  setTimeout(() => {
-  img.classList.remove("is-turning");
+  
+ setTimeout(() => {
+  if (sheet){
+    sheet.classList.remove("turn-next","turn-prev");
+  }
 }, 450);
+
 
     img.onload = () => {
       img.style.transform = "translateX(0) rotateY(0deg)";
