@@ -115,6 +115,8 @@ fsBtn.addEventListener("click", (e) => {
 });
 
 // init
+img.classList.add("is-turning");
+
 img.src = pageSrc(currentPage);
 counter.textContent = `${currentPage} / ${totalPages}`;
 preload(currentPage + 1);
