@@ -278,6 +278,11 @@ body{
       rgba(255,255,255,0.015) 2px,
       rgba(0,0,0,0) 4px);
 }
+/* Perspective = indispensable pour voir rotateY comme une vraie page */
+#reader{
+  perspective: 1200px;
+  perspective-origin: center;
+}
 
 
 
