@@ -52,6 +52,8 @@ function render(direction = 1){
   img.style.transform = `translateX(${direction * 55}px) rotateY(${direction * -12}deg)`;
 
   setTimeout(() => {
+    img.classList.add("is-turning");
+
     img.src = pageSrc(currentPage);
     img.onload = () => {
       img.style.transform = "translateX(0) rotateY(0deg)";
