@@ -1,3 +1,5 @@
+const overWrap = document.getElementById("overWrap");
+
 const totalPages = 9;
 
 const under = document.getElementById("under");
