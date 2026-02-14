@@ -447,6 +447,9 @@ body{
     radial-gradient(120% 80% at 0% 50%, rgba(0,0,0,.35), rgba(0,0,0,0) 55%),
     linear-gradient(90deg, rgba(0,0,0,.18), rgba(0,0,0,0) 55%);
   opacity: 0;
+  will-change: opacity;
+transform: translateZ(0);
+
   
 }
 
@@ -461,7 +464,9 @@ body{
     radial-gradient(120% 80% at 100% 50%, rgba(0,0,0,.35), rgba(0,0,0,0) 55%),
     linear-gradient(270deg, rgba(0,0,0,.18), rgba(0,0,0,0) 55%);
   opacity: 0;
- 
+ will-change: opacity;
+transform: translateZ(0);
+
 }
 
 
