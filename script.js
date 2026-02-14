@@ -48,8 +48,9 @@ function renderTo(targetPage, direction){
 
   if (over){
     over.classList.remove("turn-next","turn-prev");
-    void over.offsetWidth;
-    over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+void over.offsetWidth;
+
   }
 
   animTimer = setTimeout(() => {
