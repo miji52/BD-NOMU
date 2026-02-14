@@ -60,7 +60,7 @@ if (overWrap){
   overWrap.classList.add(direction > 0 ? "turn-next" : "turn-prev");
 }
 
-}
+
 
 
 
