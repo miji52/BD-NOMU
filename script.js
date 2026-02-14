@@ -48,23 +48,21 @@ function renderTo(targetPage, direction){
   hideHint();
   if (under) under.src = pageSrc(targetPage);
 
-  if (over){
-    over.classList.remove("turn-next","turn-prev");
-over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
-void over.offsetWidth;
-
-  }
 if (over){
   over.classList.remove("turn-next","turn-prev");
-  over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
   void over.offsetWidth;
+  over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
 }
 
 if (overWrap){
   overWrap.classList.remove("turn-next","turn-prev");
-  overWrap.classList.add(direction > 0 ? "turn-next" : "turn-prev");
   void overWrap.offsetWidth;
+  overWrap.classList.add(direction > 0 ? "turn-next" : "turn-prev");
 }
+
+}
+
+
 
   animTimer = setTimeout(() => {
     currentPage = targetPage;
@@ -75,6 +73,9 @@ if (overWrap){
       over.style.transform = "";
       over.src = pageSrc(currentPage);
     }
+if (overWrap){
+  overWrap.classList.remove("turn-next","turn-prev");
+}
 
     if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
     setURLPage(currentPage);
