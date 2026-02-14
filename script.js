@@ -54,6 +54,17 @@ over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
 void over.offsetWidth;
 
   }
+if (over){
+  over.classList.remove("turn-next","turn-prev");
+  over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+  void over.offsetWidth;
+}
+
+if (overWrap){
+  overWrap.classList.remove("turn-next","turn-prev");
+  overWrap.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+  void overWrap.offsetWidth;
+}
 
   animTimer = setTimeout(() => {
     currentPage = targetPage;
