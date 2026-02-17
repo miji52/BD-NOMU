@@ -398,7 +398,7 @@ body{
 
 /* animation page suivante */
 .over.turn-next{
-  transition: transform 0.55s ease, box-shadow 0.55s ease, opacity 0.45s ease;
+  
   transform: translateX(-55px) rotateY(-55deg);
   box-shadow: 30px 0 55px rgba(0,0,0,0.55);
   opacity: 0.25;
@@ -406,7 +406,7 @@ body{
 
 /* animation page précédente (tourne dans l'autre sens) */
 .over.turn-prev{
-  transition: transform 0.55s ease, box-shadow 0.55s ease, opacity 0.45s ease;
+  
   transform-origin: right center;
   transform: translateX(55px) rotateY(55deg);
   box-shadow: -30px 0 55px rgba(0,0,0,0.55);
