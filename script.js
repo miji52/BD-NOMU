@@ -83,7 +83,7 @@ if (overWrap){
     preload(currentPage - 1);
 
     animTimer = null;
-  }, 600);
+  }, 450);
 }
 
 function nextPage(){
