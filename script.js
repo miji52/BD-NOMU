@@ -73,9 +73,7 @@ if (overWrap){
       over.style.transform = "";
       over.src = pageSrc(currentPage);
     }
-if (overWrap){
-  overWrap.classList.remove("turn-next","turn-prev");
-}
+
 
     if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
     setURLPage(currentPage);
