@@ -449,6 +449,9 @@ transition: none;
 
  will-change: opacity, transform;
 transform: translateZ(0);
+#overWrap.turn-next::after { opacity: 1; }
+#overWrap.turn-prev::after { opacity: 1; }
+
 
 
 
@@ -462,7 +465,7 @@ transform: translateZ(0);
 
 
 
-transform: translateZ(0);
+
 
 
 #over::before{
