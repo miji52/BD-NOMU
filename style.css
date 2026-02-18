@@ -175,11 +175,7 @@ body{
 }
 
 /* état quand on change de page */
-.page.is-turning {
-  transform: translateX(-70px) rotateY(-18deg);
-  box-shadow:
-    25px 0 45px rgba(0,0,0,0.45);
-}
+
 /* ---- Feuille "réelle" ---- */
 .sheet{
   position: relative;
