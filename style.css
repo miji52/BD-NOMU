@@ -436,30 +436,27 @@ transform: translateZ(0);
 }
 /* Ombres "papier" */
 #overWrap::after{
-
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 10px;
   pointer-events: none;
+
+  /* ombre "papier" simple et légère (rapide à dessiner) */
   background: linear-gradient(90deg, rgba(0,0,0,.22), rgba(0,0,0,0) 60%);
 
- opacity: 0.001;
-transition: none;
+  /* IMPORTANT: toujours "prête", quasi invisible */
+  opacity: 0.001;
 
- will-change: opacity, transform;
-transform: translateZ(0);
-#overWrap.turn-next::after { opacity: 1; }
-#overWrap.turn-prev::after { opacity: 1; }
+  /* IMPORTANT: pas de transition (évite le sursaut) */
+  transition: none;
 
-
-
-
-
-  
-
-  
+  /* stabilisation GPU */
+  transform: translateZ(0);
+  will-change: opacity;
 }
+#over.turn-next ~ #overWrap::after{ opacity: 1; }
+#over.turn-prev ~ #overWrap::after{ opacity: 1; }
 
 
 
