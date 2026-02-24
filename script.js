@@ -40,11 +40,13 @@ function preload(n){
   if (n < 1 || n > totalPages) return;
   const im = new Image();
   im.src = pageSrc(n);
+  if (im.decode) im.decode().catch(()=>{});
 }
 
 function renderTo(targetPage, direction){
   if (animTimer) return;
-
+preload(targetPage + 1);
+preload(targetPage - 1);
   hideHint();
   if (under) under.src = pageSrc(targetPage);
 
