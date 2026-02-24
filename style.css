@@ -375,6 +375,7 @@ body{
   border-radius: 8px;
   background: #111;
   backface-visibility: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
 /* dessous : page cible */
@@ -385,31 +386,25 @@ body{
 
 /* dessus : page qui tourne */
 .over{
-  transition: none;
-
   z-index: 2;
   transform-origin: left center;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+  transition: transform 0.6s ease;
   will-change: transform;
-transform: translateZ(0);
-
 }
 
-/* animation page suivante */
+
+
 .over.turn-next{
-  
-  transform: translateX(-55px) rotateY(-55deg);
-  
-  opacity: 0.25;
+  transform: rotateY(-180deg);
 }
 
-/* animation page précédente (tourne dans l'autre sens) */
 .over.turn-prev{
-  
   transform-origin: right center;
-  transform: translateX(55px) rotateY(55deg);
-  
-  opacity: 0.25;
+  transform: rotateY(180deg);
 }
 /* --- Ombres "papier" (niveau 1) --- */
 .book{
