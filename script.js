@@ -48,11 +48,7 @@ function renderTo(targetPage, direction){
   hideHint();
   if (under) under.src = pageSrc(targetPage);
 
-if (over){
-  over.classList.remove("turn-next","turn-prev");
-  void over.offsetWidth;
-  over.classList.add(direction > 0 ? "turn-next" : "turn-prev");
-}
+
 
 if (overWrap){
   overWrap.classList.remove("turn-next","turn-prev");
