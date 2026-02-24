@@ -361,7 +361,7 @@ body{
   position: relative;
   width: min(92vw, 980px);
   height: min(92vh, 720px);
-  perspective: 1400px;              /* indispensable */
+  perspective: 1800px;              /* indispensable */
   perspective-origin: center;
 }
 
@@ -394,8 +394,25 @@ body{
 
   transition: transform 0.6s ease;
   will-change: transform;
+  background: linear-gradient(
+  90deg,
+  rgba(0,0,0,0.15) 0%,
+  rgba(0,0,0,0.05) 10%,
+  rgba(0,0,0,0) 20%
+);
+}
+.over{
+  transform-style: preserve-3d;
 }
 
+.over::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0f0f0f;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
 
 
 .over.turn-next{
