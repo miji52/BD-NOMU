@@ -65,12 +65,11 @@ if (overWrap){
   animTimer = setTimeout(() => {
     currentPage = targetPage;
 
-    if (over){
-      over.classList.remove("turn-next","turn-prev");
-      over.style.opacity = "";
-      over.style.transform = "";
-      over.src = pageSrc(currentPage);
-    }
+ if (overWrap){
+  overWrap.classList.remove("turn-next","turn-prev");
+  void overWrap.offsetWidth; // force reflow
+  overWrap.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+}   
 
 
     if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
