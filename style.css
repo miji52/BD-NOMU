@@ -397,14 +397,9 @@ body{
 
 
 
-.over.turn-next{
-  transform: rotateY(-180deg);
-}
 
-.over.turn-prev{
-  transform-origin: right center;
-  transform: rotateY(180deg);
-}
+
+
 /* --- Ombres "papier" (niveau 1) --- */
 .book{
   position: relative;
@@ -449,8 +444,8 @@ body{
   transform: translateZ(0);
   will-change: opacity;
 }
-#over.turn-next ~ #overWrap::after{ opacity: 1; }
-#over.turn-prev ~ #overWrap::after{ opacity: 1; }
+
+
 
 
 
@@ -486,24 +481,11 @@ transform: translateZ(0);
 
 
 /* Quand on tourne vers l'avant (page suivante) */
-#over.turn-next{
-  will-change: transform, opacity;
-transform: translateZ(0);
 
- 
-
-}
 
 
 /* Quand on tourne en arrière (page précédente) */
-#over.turn-prev{
-  will-change: transform, opacity;
-transform: translateZ(0);
 
-  transform-origin: right center;
-  
-
-}
 
     radial-gradient(120% 80% at 100% 50%, rgba(0,0,0,.35), rgba(0,0,0,0) 55%),
     linear-gradient(270deg, rgba(0,0,0,.18), rgba(0,0,0,0) 55%);
@@ -550,7 +532,29 @@ will-change: transform;
   border-radius: 10px;
   display: block;
 }
+.book{
+  perspective: 1400px;
+}
+#overWrap{
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  will-change: transform;
+}
+#overWrap.turn-next{
+  animation: turnNext 0.6s ease forwards;
+}
+#overWrap.turn-prev{
+  transform-origin: right center;
+  animation: turnPrev 0.6s ease forwards;
+}
 
-
+@keyframes turnNext{
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(-180deg); }
+}
+@keyframes turnPrev{
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
 
 
