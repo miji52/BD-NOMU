@@ -507,13 +507,12 @@ transform: translateZ(0);
   position: absolute;
   inset: 0;
   border-radius: 10px;
-  will-change: transform, opacity;
-  transform: translateZ(0);
+  transform-style: preserve-3d;
+  transform-origin: left center;
   backface-visibility: hidden;
   pointer-events: none;
   transform: translateZ(0);
-will-change: transform;
-
+  will-change: transform;
 }
 #overWrap.turn-next{
   transform-origin: left center;
@@ -532,21 +531,7 @@ will-change: transform;
   border-radius: 10px;
   display: block;
 }
-.book{
-  perspective: 1400px;
-}
-#overWrap{
-  transform-style: preserve-3d;
-  transform-origin: left center;
-  will-change: transform;
-}
-#overWrap.turn-next{
-  animation: turnNext 0.6s ease forwards;
-}
-#overWrap.turn-prev{
-  transform-origin: right center;
-  animation: turnPrev 0.6s ease forwards;
-}
+
 
 @keyframes turnNext{
   0%   { transform: rotateY(0deg); }
