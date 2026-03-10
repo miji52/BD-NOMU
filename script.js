@@ -76,7 +76,7 @@ if (overWrap){
     preload(currentPage - 1);
 
     animTimer = null;
-  }, 450);
+  }, 1100);
 }
 
 function nextPage(){
