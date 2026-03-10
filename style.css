@@ -517,13 +517,13 @@ transform: translateZ(0);
 }
 #overWrap.turn-next{
   transform-origin: left center;
-  animation: turnNext 0.9s ease-in-out forwards;
+  animation: turnNext 1.2s ease-in-out forwards;
   filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
 }
 
 #overWrap.turn-prev{
   transform-origin: right center;
-  animation: turnPrev 0.9s ease-in-out forwards;
+  animation: turnPrev 1.2s ease-in-out forwards;
   filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
 }
 /* l'image dedans */
