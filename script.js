@@ -45,28 +45,31 @@ function preload(n){
 
 function renderTo(targetPage, direction){
   if (animTimer) return;
-preload(targetPage + 1);
-preload(targetPage - 1);
+
+  preload(targetPage + 1);
+  preload(targetPage - 1);
+
   hideHint();
+
   if (under) under.src = pageSrc(targetPage);
 
-
-
-if (overWrap){
-  overWrap.classList.remove("turn-next","turn-prev");
-  void overWrap.offsetWidth;
-  overWrap.classList.add(direction > 0 ? "turn-next" : "turn-prev");
-}
-
-
-
-
+  if (overWrap){
+    overWrap.classList.remove("turn-next", "turn-prev");
+    void overWrap.offsetWidth;
+    overWrap.classList.add(direction > 0 ? "turn-next" : "turn-prev");
+  }
 
   animTimer = setTimeout(() => {
     currentPage = targetPage;
 
-   
+    if (overWrap){
+      overWrap.classList.remove("turn-next", "turn-prev");
+      overWrap.style.transform = "";
+    }
 
+    if (over){
+      over.src = pageSrc(currentPage);
+    }
 
     if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
     setURLPage(currentPage);
@@ -78,7 +81,6 @@ if (overWrap){
     animTimer = null;
   }, 1100);
 }
-
 function nextPage(){
   if (currentPage >= totalPages) return goEnd();
   renderTo(currentPage + 1, +1);
