@@ -79,7 +79,7 @@ function renderTo(targetPage, direction){
     preload(currentPage - 1);
 
     animTimer = null;
-  }, 1100);
+  }, 1000);
 }
 function nextPage(){
   if (currentPage >= totalPages) return goEnd();
