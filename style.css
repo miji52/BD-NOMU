@@ -571,26 +571,31 @@ transform: translateZ(0);
   0%{
     opacity: 0;
   }
-  15%{
+  10%{
     opacity: 0.35;
   }
-  50%{
+  40%{
     opacity: 0.22;
+  }
+  85%{
+    opacity: 0;
   }
   100%{
     opacity: 0;
   }
 }
-
 @keyframes shadowPrev{
   0%{
     opacity: 0;
   }
-  15%{
+  10%{
     opacity: 0.35;
   }
-  50%{
+  40%{
     opacity: 0.22;
+  }
+  85%{
+    opacity: 0;
   }
   100%{
     opacity: 0;
