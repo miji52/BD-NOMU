@@ -590,28 +590,18 @@ transform: translateZ(0);
 }
 
 /* verso de la page */
-#overWrap::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 10px;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(0,0,0,0.22), rgba(0,0,0,0) 60%);
-  opacity: 0;
-  transform: translateZ(0);
-  will-change: opacity;
-}
+
 
 /* animation page suivante */
 #overWrap.turn-next{
   transform-origin: left center;
-  animation: turnNext 1.1s ease-in-out forwards;
+  animation: turnNext 1s ease-in-out forwards;
 }
 
 /* animation page précédente */
 #overWrap.turn-prev{
   transform-origin: right center;
-  animation: turnPrev 1.1s ease-in-out forwards;
+  animation: turnPrev 1s ease-in-out forwards;
 }
 
 @keyframes turnNext{
