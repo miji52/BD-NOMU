@@ -4,7 +4,7 @@ const totalPages = 9;
 
 const under = document.getElementById("under");
 const over = document.getElementById("over");
-const pageFlipSound = new Audio("sounds/page-flip.mp3");
+const pageFlipSound = new Audio("page-flip.mp3");
 pageFlipSound.preload = "auto";
 pageFlipSound.volume = 0.35;
 const counter = document.getElementById("counter");
