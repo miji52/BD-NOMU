@@ -55,8 +55,11 @@ function renderTo(targetPage, direction){
   hideHint();
 
   if (under) under.src = pageSrc(targetPage);
+  setTimeout(() => {
   pageFlipSound.currentTime = 0;
-pageFlipSound.play().catch(() => {});
+  pageFlipSound.play().catch(() => {});
+}, 120);
+ 
 
   if (overWrap){
     overWrap.classList.remove("turn-next", "turn-prev");
