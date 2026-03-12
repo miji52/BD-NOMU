@@ -58,7 +58,7 @@ function renderTo(targetPage, direction){
   setTimeout(() => {
   pageFlipSound.currentTime = 0;
   pageFlipSound.play().catch(() => {});
-}, 120);
+}, 140);
  
 
   if (overWrap){
