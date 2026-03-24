@@ -705,13 +705,12 @@ transform: translateZ(0);
 @media (max-width: 700px){
 
   .card{
-    width: 98vw !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-  }
+  width: 96vw !important;
+  border-radius: 14px !important;
+}
 
   .card .meta{
-    padding: 8px 8px 6px !important;
+  padding: 10px 10px 0 !important;
   }
 
   .card h1{
@@ -733,14 +732,14 @@ transform: translateZ(0);
   }
 
   .cover{
-    width: 100% !important;
-    max-width: none !important;
-    max-height: none !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 !important;
-    border-radius: 0 0 12px 12px !important;
-    transform: none !important;
+  width: calc(100% + 20px) !important;
+  max-width: none !important;
+  max-height: none !important;
+  height: auto !important;
+  display: block !important;
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  margin-top: 8px !important;
   }
 
   .card:hover .cover{
