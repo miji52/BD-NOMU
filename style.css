@@ -707,17 +707,19 @@ transform: translateZ(0);
     font-size: 16px !important;
   }
 
-  .cover{
+.cover{
   width: calc(100% + 20px) !important;
-  max-width: none !important;
-  max-height: none !important;
-  height: auto !important;
+  height: 68vh !important;
   display: block !important;
   margin-left: -10px !important;
   margin-right: -10px !important;
   margin-top: 8px !important;
-  }
 
+  object-fit: cover !important;
+  object-position: center top !important;
+  max-width: none !important;
+  max-height: none !important;
+}
   .card:hover .cover{
     transform: none !important;
     box-shadow: none !important;
