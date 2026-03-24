@@ -708,17 +708,14 @@ transform: translateZ(0);
   }
 
 .cover{
-  width: calc(100% + 20px) !important;
-  height: 68vh !important;
+  width: 100% !important;
+  height: auto !important;
   display: block !important;
-  margin-left: -10px !important;
-  margin-right: -10px !important;
-  margin-top: 8px !important;
-
-  object-fit: cover !important;
-  object-position: center top !important;
+  margin: 0 !important;
   max-width: none !important;
   max-height: none !important;
+  object-fit: contain !important;
+  border-radius: 0 0 14px 14px !important;
 }
   .card:hover .cover{
     transform: none !important;
