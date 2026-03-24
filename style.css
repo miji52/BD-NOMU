@@ -716,9 +716,7 @@ transform: translateZ(0);
   }
 
 
-.card:hover .cover{
-  animation-play-state: paused;
-}
+
 }
 @media (max-width: 700px){
   .card{
