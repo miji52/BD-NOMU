@@ -672,8 +672,10 @@ transform: translateZ(0);
   transition: transform 0.35s ease;
 }
 
-.card:hover img{
-  transform: scale(1.05);
+@media (hover: hover){
+  .card:hover img{
+    transform: scale(1.05);
+  }
 }
 
 
