@@ -675,9 +675,6 @@ transform: translateZ(0);
 .card:hover img{
   transform: scale(1.05);
 }
-.card:active img{
-  transform: scale(1.05);
-}
 
 @media (max-width: 700px){
   .card{
@@ -686,7 +683,7 @@ transform: translateZ(0);
   }
 
   .card .meta{
-    padding: 10px 10px 8px;
+    padding: 10px 10px 0;
   }
 
   .btn{
