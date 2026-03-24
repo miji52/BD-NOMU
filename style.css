@@ -724,3 +724,45 @@ transform: translateZ(0);
     box-shadow: none !important;
   }
 }
+@media (max-width: 700px){
+  .card{
+    width: 96vw !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+
+  .cover{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    border-radius: 16px 16px 0 0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .card .meta{
+    padding: 10px 10px 12px !important;
+  }
+
+  .card h1{
+    margin: 0 0 6px !important;
+    font-size: 22px !important;
+    line-height: 1.05 !important;
+  }
+
+  .card p{
+    margin: 0 0 8px !important;
+    font-size: 15px !important;
+    line-height: 1.1 !important;
+  }
+
+  .btn{
+    margin: 0 0 8px !important;
+    padding: 10px 14px !important;
+    font-size: 16px !important;
+  }
+}
