@@ -724,8 +724,7 @@ transform: translateZ(0);
   border-radius: 0 0 14px 14px !important;
 }
   .card:hover .cover{
-    transform: none !important;
-    box-shadow: none !important;
+  transform: scale(1.03);
   }
 }
 @media (max-width: 700px){
