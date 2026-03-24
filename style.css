@@ -69,7 +69,7 @@ body{
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .card:hover .cover{
-  transform: scale(1.03) 
+  animation-play-state: paused;
 }
 
 .cover{
