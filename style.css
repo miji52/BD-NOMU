@@ -699,3 +699,50 @@ transform: translateZ(0);
     border-radius: 12px;
   }
 }
+/* ===== OVERRIDE MOBILE FORT ACCUEIL ===== */
+@media (max-width: 700px){
+
+  .card{
+    width: 98vw !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .card .meta{
+    padding: 8px 8px 6px !important;
+  }
+
+  .card h1{
+    margin: 0 0 6px !important;
+    font-size: 24px !important;
+    line-height: 1.05 !important;
+  }
+
+  .card p{
+    margin: 0 0 8px !important;
+    font-size: 16px !important;
+    line-height: 1.1 !important;
+  }
+
+  .btn{
+    margin: 0 0 8px !important;
+    padding: 10px 14px !important;
+    font-size: 16px !important;
+  }
+
+  .cover{
+    width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    transform: none !important;
+  }
+
+  .card:hover .cover{
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
