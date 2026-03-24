@@ -69,12 +69,8 @@ body{
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .card:hover .cover{
-  transform: scale(1.04) rotate(0deg);
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.45),
-    0 10px 25px rgba(0,0,0,0.3);
+  transform: scale(1.03) 
 }
-
 
 .cover{
   width: 92% !important;
@@ -83,10 +79,14 @@ body{
   margin: 20px auto 0px !important;
   border-radius: 16px !important;
 
+  /* 👇 OMBRE PERMANENTE */
   box-shadow:
-    0 25px 50px rgba(0,0,0,0.35),
-    0 10px 25px rgba(0,0,0,0.25);
+    0 20px 40px rgba(0,0,0,0.35),
+    0 8px 20px rgba(0,0,0,0.25);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .btn{
   display: inline-block;
