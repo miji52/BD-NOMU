@@ -676,31 +676,7 @@ transform: translateZ(0);
   transform: scale(1.05);
 }
 
-@media (max-width: 700px){
-  .card{
-    width: 96vw;
-    border-radius: 14px;
-  }
 
-  .card .meta{
-    padding: 10px 10px 0;
-  }
-
-  .btn{
-    margin-bottom: 8px;
-  }
-
-  .cover{
-    width: calc(100% + 20px);
-    max-width: none;
-    max-height: none;
-    height: auto;
-    display: block;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: 8px;
-  }
-}
 /* ===== OVERRIDE MOBILE FORT ACCUEIL ===== */
 @media (max-width: 700px){
 
