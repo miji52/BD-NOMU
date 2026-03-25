@@ -43,6 +43,7 @@
     }
     const btn = document.getElementById("soundBtn");
 const music = document.getElementById("bgMusic");
+    const cover = document.querySelector(".cover");
 
 // volume de base
 music.volume = 0.3;
@@ -55,6 +56,11 @@ btn.addEventListener("click", () => {
 
     music.currentTime = 0;
     music.play();
+    if (cover) {
+  cover.style.animation = "none";
+  void cover.offsetWidth;
+  cover.style.animation = "coverFloat 7s ease-in-out infinite";
+   }
 
     // fade-in (montée progressive du son)
     music.volume = 0;
