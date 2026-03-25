@@ -41,6 +41,45 @@
       resumeBtn.textContent = "Reprendre (page " + p + ")";
       resumeBtn.style.display = "inline-block";
     }
+    const btn = document.getElementById("soundBtn");
+const music = document.getElementById("bgMusic");
+
+// volume de base
+music.volume = 0.3;
+
+let playing = false;
+
+btn.addEventListener("click", () => {
+
+  if (!playing) {
+
+    music.currentTime = 0;
+    music.play();
+
+    // fade-in (montée progressive du son)
+    music.volume = 0;
+    let vol = 0;
+
+    const fade = setInterval(() => {
+      if (vol < 0.3) {
+        vol += 0.02;
+        music.volume = vol;
+      } else {
+        clearInterval(fade);
+      }
+    }, 100);
+
+    btn.textContent = "🔇 Stop";
+
+  } else {
+
+    music.pause();
+    btn.textContent = "🔊 Musique";
+
+  }
+
+  playing = !playing;
+});
   })();
 </script>
 
