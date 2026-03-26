@@ -136,15 +136,15 @@ transform-origin: center;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 145px);
-  background: rgba(0,0,0,0.6);
+  bottom: 180px;
+  background: rgba(0,0,0,0.75);
   color: white;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 12px;
-  font-size: 13px;
+  font-size: 16px;
   opacity: 1;
   transition: opacity 0.4s ease;
-  z-index: 1000;
+  z-index: 99999;
 }
 
 /* -------- Lecteur -------- */
