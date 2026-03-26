@@ -145,7 +145,7 @@ transform-origin: center;
   opacity: 1;
   transition: opacity 0.4s ease;
   z-index: 1000;
-  }
+}
 
 /* -------- Lecteur -------- */
 #reader{
