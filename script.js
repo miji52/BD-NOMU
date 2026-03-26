@@ -36,6 +36,11 @@ function saveLastPage(n){
 function hideHint(){
   if (hint) hint.style.opacity = 0;
 }
+function showHintTemporarily(){
+  if (!hint) return;
+  hint.style.opacity = 1;
+  setTimeout(hideHint, 3000);
+}
 function goEnd(){
   window.location.href = "end.html";
 }
@@ -85,6 +90,7 @@ function renderTo(targetPage, direction){
 
     preload(currentPage + 1);
     preload(currentPage - 1);
+    showHintTemporarily();
 
     animTimer = null;
   }, 1000);
