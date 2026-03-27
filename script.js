@@ -135,7 +135,7 @@ if (under && over){
   under.src = pageSrc(currentPage);
   over.src = pageSrc(currentPage);
 }
-if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
+
 setURLPage(currentPage);
 window.addEventListener("load", showHintTemporarily);
 
