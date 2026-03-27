@@ -176,7 +176,7 @@ white-space: nowrap;
   user-select: none;
 }
 
-#counter, #hint, #fsBtn, #homeBtn{
+#counter, #fsBtn, #homeBtn{
   position: absolute;
   background: var(--ui);
   color: var(--txt);
