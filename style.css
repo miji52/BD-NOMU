@@ -190,27 +190,7 @@ white-space: nowrap;
 #homeBtn{ top: 10px; left: 12px; text-decoration: none; }
 
 #fsBtn:active{ transform: scale(0.98); }
-#hint{
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 165px;
-  background: rgba(0,0,0,0.78);
-  color: #ffffff;
-  padding: 12px 18px;
-  border-radius: 14px;
-  font-family: 'Quicksand', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 99999;
-  pointer-events: none;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  }
+
 
 @keyframes hintAppear {
   from { opacity: 0; transform: translateX(-50%) translateY(10px); }
@@ -402,20 +382,7 @@ white-space: nowrap;
 }
 
 /* Hint visible au début, puis on le fera disparaître en JS */
-#hint{
-  position: fixed;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.55);
-  color: rgba(255,255,255,0.92);
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-size: 13px;
-  z-index: 1000;
-  pointer-events: none;
-  transition: opacity 0.35s ease;
-}
+
 
 /* Le "livre" */
 .book{
