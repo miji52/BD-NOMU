@@ -134,6 +134,8 @@ if (under && over){
 }
 if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
 setURLPage(currentPage);
+window.addEventListener("load", showHintTemporarily);
+
 if (hint) {
   setTimeout(() => {
     hint.style.opacity = 1;
