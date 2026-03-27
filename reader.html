@@ -5,31 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lecteur – Nomu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="reader" class="reader">
-<a href="index.html" class="home">⌂</a>
+  <div id="reader" class="reader">
+    <a href="index.html" class="home">⌂</a>
 
+    <!-- "Livre" : 2 images superposées -->
+    <div id="book" class="book">
+      <img id="under" class="page under" src="pages/page01.png" draggable="false" />
 
-  
-    
-  
- 
-
-<!-- "Livre" : 2 images superposées -->
-<div id="book" class="book">
-  <img id="under" class="page under" src="pages/page01.png" draggable="false" />
-
-  <div id="overWrap" class="overWrap">
-    <img id="over" class="page over" src="pages/page01.png" draggable="false" />
+      <div id="overWrap" class="overWrap">
+        <img id="over" class="page over" src="pages/page01.png" draggable="false" />
+      </div>
+    </div>
   </div>
-</div>
 
-</div>
   <div id="hint">← Page précédente • Page suivante →</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
