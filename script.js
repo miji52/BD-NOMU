@@ -39,7 +39,7 @@ function hideHint(){
 function showHintTemporarily(){
   if (!hint) return;
   hint.style.opacity = 1;
-  setTimeout(hideHint, 3000);
+  setTimeout(hideHint, 4000);
 }
 
 function goEnd(){
