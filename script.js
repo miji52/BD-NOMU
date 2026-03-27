@@ -8,7 +8,7 @@ const pageFlipSound = new Audio("page-flip.mp3");
 pageFlipSound.preload = "auto";
 pageFlipSound.volume = 0.35;
 const counter = document.getElementById("counter");
-const fsBtn = document.getElementById("fsBtn");
+
 const hint = document.getElementById("hint");
 
 let currentPage = getInitialPageFromURL();
@@ -112,7 +112,7 @@ document.addEventListener("keydown", (e) => {
 
 document.addEventListener("click", (e) => {
   const t = e.target;
-  if (t && (t.id === "fsBtn" || t.classList.contains("home"))) return;
+  if (t && t.classList.contains("home")) return;
   const middle = window.innerWidth / 2;
   e.clientX > middle ? nextPage() : prevPage();
 });
