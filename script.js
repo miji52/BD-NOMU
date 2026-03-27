@@ -134,6 +134,14 @@ if (under && over){
 }
 if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
 setURLPage(currentPage);
+if (hint) {
+  setTimeout(() => {
+    hint.style.opacity = 1;
+    setTimeout(() => {
+      hint.style.opacity = 0;
+    }, 3000);
+  }, 300);
+    }
 showHintTemporarily();
 saveLastPage(currentPage);
 preload(currentPage + 1);
