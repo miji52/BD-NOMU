@@ -41,6 +41,7 @@ function showHintTemporarily(){
   hint.style.opacity = 1;
   setTimeout(hideHint, 3000);
 }
+showHintTemporarily();
 function goEnd(){
   window.location.href = "end.html";
 }
