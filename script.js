@@ -59,6 +59,9 @@ function renderTo(targetPage, direction){
   preload(targetPage - 1);
 
   hideHint();
+  if (currentPage === 1) {
+  showHintTemporarily();
+  }
 
   if (under) under.src = pageSrc(targetPage);
   setTimeout(() => {
