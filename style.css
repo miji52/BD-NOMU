@@ -799,3 +799,8 @@ body{
     transform: scale(1);
   }
 }
+@media (max-width: 700px){
+  #fsBtn{
+    display: none !important;
+  }
+    }
