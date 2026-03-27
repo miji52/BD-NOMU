@@ -134,6 +134,7 @@ if (under && over){
 }
 if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
 setURLPage(currentPage);
+showHintTemporarily();
 saveLastPage(currentPage);
 preload(currentPage + 1);
 preload(currentPage - 1);
