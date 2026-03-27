@@ -133,6 +133,7 @@ transform-origin: center;
   margin-top: 10px;
 }
 #hint{
+  font-family: 'Dancing Script', cursive;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
