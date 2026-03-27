@@ -133,13 +133,13 @@ transform-origin: center;
   margin-top: 10px;
 }
 #hint{
-  font-family: 'Quicksand', sans-serif;
-font-weight: 600;
+  font-family: 'Quicksand', sans-serif !important;
+font-weight: 600 !important;
 
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 140px;
+  bottom: 80px;
   background: rgba(0,0,0,0.5);
   color: white;
   padding: 10px 16px;
