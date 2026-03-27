@@ -41,7 +41,7 @@ function showHintTemporarily(){
   hint.style.opacity = 1;
   setTimeout(hideHint, 3000);
 }
-showHintTemporarily();
+
 function goEnd(){
   window.location.href = "end.html";
 }
@@ -59,7 +59,7 @@ function renderTo(targetPage, direction){
   preload(targetPage - 1);
 
   hideHint();
-  if (currentPage === 1) {
+  if (targetPage === 1) {
   showHintTemporarily();
   }
 
@@ -94,7 +94,7 @@ function renderTo(targetPage, direction){
 
     preload(currentPage + 1);
     preload(currentPage - 1);
-    showHintTemporarily();
+    
 
     animTimer = null;
   }, 1000);
@@ -139,15 +139,7 @@ if (counter) counter.textContent = `${currentPage} / ${totalPages}`;
 setURLPage(currentPage);
 window.addEventListener("load", showHintTemporarily);
 
-if (hint) {
-  setTimeout(() => {
-    hint.style.opacity = 1;
-    setTimeout(() => {
-      hint.style.opacity = 0;
-    }, 3000);
-  }, 300);
-    }
-showHintTemporarily();
+
 saveLastPage(currentPage);
 preload(currentPage + 1);
 preload(currentPage - 1);
