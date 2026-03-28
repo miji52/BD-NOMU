@@ -30,6 +30,7 @@ body{
   overflow: hidden;
 }
 .shell p{
+  font-family: inherit;
   color: #f5e6d3;
   letter-spacing: 0.5px;
   opacity: 0.85;
