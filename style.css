@@ -29,6 +29,11 @@ body{
   height: 100vh;
   overflow: hidden;
 }
+.shell p{
+  color: #f5e6d3;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
 
 /* -------- Accueil + Fin -------- */
 .shell{
