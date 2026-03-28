@@ -395,13 +395,20 @@ white-space: nowrap;
   top: 14px;
   left: 14px;
 
-  background: transparent;
-  padding: 6px;
+  background: rgba(20,20,20,0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 999px;
+  padding: 8px;
 
-  opacity: 0.6;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+
+  opacity: 1;
 
   z-index: 99999;
+
+  animation: pulseHome 3s ease-in-out infinite;
 }
 
 /* icône */
@@ -810,3 +817,17 @@ body{
     display: none !important;
   }
     }
+@keyframes pulseHome {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  }
