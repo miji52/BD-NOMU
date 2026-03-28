@@ -1,4 +1,4 @@
-style.css
+
 @font-face {
   font-family: 'Quicksand';
   src: url('Quicksand-Regular.ttf') format('truetype');
@@ -144,7 +144,7 @@ transform-origin: center;
   margin-top: 10px;
 }
 #hint{
- font-family: 'Quicksand', sans-serif !important;
+ font-family: 'QuicksandLocal', sans-serif !important;
 font-weight: 600 !important;
   font-style: normal;
 letter-spacing: 0.5px;
