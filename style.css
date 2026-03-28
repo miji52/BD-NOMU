@@ -1,17 +1,18 @@
 
 @font-face {
   font-family: 'QuicksandLocal';
-  src: url('Quicksand-Regular.ttf') format('truetype');
+  src: url('./Quicksand-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'QuicksandLocal';
-  src: url('Quicksand-SemiBold.ttf') format('truetype');
+  src: url('./Quicksand-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
+  
 
 :root{
   --bg: #b4531a;
