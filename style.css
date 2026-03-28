@@ -392,14 +392,23 @@ white-space: nowrap;
 
 .home{
   position: fixed;
-  top: 12px;
-  left: 12px;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 10px;
-  border-radius: 999px;
-  z-index: 1001;
+  top: 14px;
+  left: 14px;
+
+  background: transparent;
+  padding: 6px;
+
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+
+  z-index: 99999;
+}
+
+/* icône */
+.home img{
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
 }
 
 /* Hint visible au début, puis on le fera disparaître en JS */
