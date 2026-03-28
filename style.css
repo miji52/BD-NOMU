@@ -30,7 +30,7 @@ body{
   overflow: hidden;
 }
 .shell p{
-  font-family: inherit;
+  font-family: system-ui, -apple-system, Arial, sans-serif;
   color: #f5e6d3;
   letter-spacing: 0.5px;
   opacity: 0.85;
